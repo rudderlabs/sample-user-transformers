@@ -12,3 +12,7 @@ Released under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
 This repository contains code for sample user transformations that can be added via the Rudder Configuration Plane
 
+Following are some of the transformations available
+
+* Template User Transformation for PII Detection and Masking
+
