@@ -21,13 +21,22 @@ and values of matching attributes are replaced with Xs or a masked representatio
 
 * Template User Transformation for Selective Event Removal and Value Aggregation
 
-This is a sample/templage user transformation wherein following functions are performed
+	* Selectively remove events based on name match
 
-* 	Selectively remove events based on name match
+	* Selectively remove events based on value of an attribute
 
-* 	Selectively remove events based on value of an attribute
+	* Aggregate values of certain attributes for multiple instances of a specific type of event in a batch and then replace
+	  the multiple instances with a single instance containing the aggregated attributes
+	  
 
-* 	Aggregate values of certain attributes for multiple instances of a specific type of event in a batch and then replace
-	the multiple instances with a single instance containing the aggregated attributes
+* Template User Transformation for Missing Value Substitution and Batch Size Reduction or Sampling
+	
+	* Replace missing values for User-Agent attribute
+	
+	* In cases where developer has populated cricual attributes within nested structures but not at the root level, copy
+	  the values to root level
+	  
+	* Reduce batch size by first shuffling the events to try and achieve even distribution of event types and then select
+	  only a subset of events
 
 
