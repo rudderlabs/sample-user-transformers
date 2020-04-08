@@ -38,5 +38,10 @@ and values of matching attributes are replaced with Xs or a masked representatio
 	  
 	* Reduce batch size by first shuffling the events to try and achieve even distribution of event types and then select
 	  only a subset of events
+	  
+* Template User Transformation for Removing Attributes without Values 
+
+This is a sample/template transformation wherein all attributes within the event payload, which are not having any value,
+are removed to reduce the payload size and also optimize storage space for warehouses
 
 
