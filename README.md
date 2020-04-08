@@ -23,11 +23,11 @@ and values of matching attributes are replaced with Xs or a masked representatio
 
 This is a sample/templage user transformation wherein following functions are performed
 
-* * Selectively remove events based on name match
+	* Selectively remove events based on name match
 
-* * Selectively remove events based on value of an attribute
+	* Selectively remove events based on value of an attribute
 
-* * Aggregate values of certain attributes for multiple instances of a specific type of event in a batch and then replace
+	* Aggregate values of certain attributes for multiple instances of a specific type of event in a batch and then replace
 	the multiple instances with a single instance containing the aggregated attributes
 
 
