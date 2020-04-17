@@ -12,7 +12,17 @@ The user-defined transformation function:
 - Emits the modified payload
 
 ## Get Started
-The sample user transformations included in this repository can be added via the RudderStack Configuration Plane. To know how to do this in more detail, please check out our [documentation](https://docs.rudderstack.com/).
+The sample user transformations included in this repository can be added via the RudderStack Configuration Plane.
+
+Adding a new user-defined transformation function is quite simple:
+- Log into the [RudderStack dashboard](https://app.rudderstack.com/)
+- Click on the [Transformations](https://app.rudderstack.com/transformations) link
+- Click on **CREATE NEW**
+- Add your code within the `transform` function in the **Transformation** window that comes up. You can add other functions and call them from within `transform`
+
+**Note**: User Transformations need to have a `transform` method that will take an array of events as argument and return the modified array
+
+**Tip**: You can copy-paste the entire code of any of the functions in this repository into the **Transformation** window. Do remember to delete the pre-populated `transform` function in such cases, before pasting your code.
 
 Here’s a quick visual tutorial on how to do so:
 
