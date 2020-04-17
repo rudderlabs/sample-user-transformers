@@ -1,6 +1,6 @@
 ## User-defined Transformations for RudderStack
 
-RudderStack gives you the ability to code your own custom transformation functions to implement use-cases based on your requirements. As these transformation functions are written in JavaScript, it is very easy for you to integrate these functions into the RudderStack data pipeline.
+RudderStack gives you the ability to code your custom transformation functions to implement use-cases based on your requirements. As these transformation functions are written in JavaScript, it is very easy for you to integrate these functions into the RudderStack data pipeline. Common use cases include PII detection and masking, event removal and aggregation, and event enrichment.
 
 This repository contains some useful transformation templates that you can use to create your own user-defined functions.
 
