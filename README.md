@@ -26,7 +26,7 @@ Adding a new user-defined transformation function is quite simple:
 
 Here’s a quick visual tutorial on how to do so:
 
-![Demo for User-defined Functions](UDF.gif)
+![Demo for User-defined Functions](Resources/UDF.gif)
 
 The following sections give you a detailed overview of the functionality of the sample transformation functions:
 
