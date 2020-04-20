@@ -42,10 +42,6 @@ This transformation function allows you to:
 - Selectively removes events based on the value of a given attribute
 - Aggregates values of certain attributes for multiple instances of a specific type of event in a batch and then replaces those instances with a single instance containing the aggregated attributes
 
-<<<<<<< HEAD
-=======
->>>>>>> c494e2a26affca48e88df1d96dd86938413b02cc
-
 ### User Transformation for Missing Value Substitution and Batch Size Reduction or Sampling
 This user transformation does the following:
 - Replaces missing values for a User-Agent attribute
