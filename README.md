@@ -44,4 +44,15 @@ and values of matching attributes are replaced with Xs or a masked representatio
 This is a sample/template transformation wherein all attributes within the event payload, which are not having any value,
 are removed to reduce the payload size and also optimize storage space for warehouses
 
+* Template User Transformation for Filtering by User E-Mail Domain, Name Splitting, Campaign Parameter Extraction
+	
+	* Filter out events triggered by users whose e-mail address, if present, is from a particular domain. This can help
+	  in filtering out events triggered by users belonging to the enterprise owning the installation. Such users would
+	  not really be customers per se and hence might not be of interest
+	
+	* If Full Name has been specified for user, then split the same into First and Last Names
+	  
+	* In case of web events, if the URL of the page visited contains UTM information, then same to be extracted and
+	  appropriate keys of the canonical object model to be populated. These can then be used by subsequent 
+	  campaign-oriented Destination Transformers e.g. MailChimp
 
