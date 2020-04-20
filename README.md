@@ -43,27 +43,25 @@ This transformation function allows you to:
 - Aggregates values of certain attributes for multiple instances of a specific type of event in a batch and then replaces those instances with a single instance containing the aggregated attributes
 
 <<<<<<< HEAD
-* Template User Transformation for Filtering by User E-Mail Domain, Name Splitting, Campaign Parameter Extraction
-	
-	* Filter out events triggered by users whose e-mail address, if present, is from a particular domain. This can help
-	  in filtering out events triggered by users belonging to the enterprise owning the installation. Such users would
-	  not really be customers per se and hence might not be of interest
-	
-	* If Full Name has been specified for user, then split the same into First and Last Names
-	  
-	* In case of web events, if the URL of the page visited contains UTM information, then same to be extracted and
-	  appropriate keys of the canonical object model to be populated. These can then be used by subsequent 
-	  campaign-oriented Destination Transformers e.g. MailChimp
 =======
+>>>>>>> c494e2a26affca48e88df1d96dd86938413b02cc
+
 ### User Transformation for Missing Value Substitution and Batch Size Reduction or Sampling
 This user transformation does the following:
 - Replaces missing values for a User-Agent attribute
 - In cases where the developer has populated crucial attributes within nested structures but not at the root level, copies the values to the root level
 - Reduces batch size and then selects only a subset of events
->>>>>>> c494e2a26affca48e88df1d96dd86938413b02cc
 
 ### User Transformation for Removing Attributes without Values
 In this transformation function, all the attributes within a given event payload which do not have any value are removed to reduce the payload size and optimize the storage space for warehouses.
+
+### Template User Transformation for Filtering by User E-Mail Domain, Name Splitting, Campaign Parameter Extraction
+This user transformation does the following:	
+- Filter out events triggered by users whose e-mail address, if present, is from a particular domain. This can help in filtering out events triggered by users belonging to the enterprise owning the installation. Such users would not really be customers  per se and hence might not be of interest
+	
+- If Full Name has been specified for user, then split the same into First and Last Names
+	  
+- In case of web events, if the URL of the page visited contains UTM information, then same to be extracted and appropriate keys of the canonical object model to be populated. These can then be used by subsequent campaign-oriented Destination Transformers e.g. MailChimp
 
 Please feel free to use these functions and tweak them as per your requirements.
 
