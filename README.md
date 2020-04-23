@@ -67,7 +67,7 @@ To know more about RudderStack, please visit our [website](https://rudderstack.c
 Please see the [contributing guide](https://github.com/rudderlabs/rudder-server/blob/master/CONTRIBUTING.md) to get more information on how you can contribute to this project. If you have any ideas on developing your own custom transformation functions and want some more inputs or thoughts on them, you can talk to us on our [Discord](https://discordapp.com/invite/xNEdEGw) channel.
 
 ## Resources
-- [RudderStack Documentation](https://docs.rudderstack.com/)
-- [Destination Transformation in RudderStack](https://docs.rudderstack.com/contributor-guide/create-a-new-destination-transformer-for-rudder)
+- [Adding a New User-Defined Transformation in RudderStack](https://docs.rudderstack.com/getting-started/adding-a-new-user-defined-transformation-in-rudderstack)
 - [Protect Personally Identifiable Information (PII) in Your Apps Using RudderStack](https://rudderstack.com/blog/protect-personally-identifiable-information-pii-using-rudderstack/)
 - [Best Practices for Coding RudderStack Transformation Functions](https://docs.rudderstack.com/contributor-guide/create-a-new-destination-transformer-for-rudder/best-practices-for-coding-transformation-functions-in-javascript#best-practices-for-coding-rudderstack-transformation-functions)
+- [Destination Transformation in RudderStack](https://docs.rudderstack.com/contributor-guide/create-a-new-destination-transformer-for-rudder)
