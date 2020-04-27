@@ -30,28 +30,28 @@ Here’s a quick visual tutorial on how to do so:
 
 The following sections give you a detailed overview of the functionality of the sample transformation functions:
 
-### User Transformation for PII Detection and Masking
+### **User Transformation for PII Detection and Masking**
 This transformation function takes developer-supplied attribute names along with the values of matching attributes, and replaces them with **X**s or a masked representation, as per the developer's choice.
 
 [Read more](https://rudderstack.com/blog/protect-personally-identifiable-information-pii-using-rudderstack/) on how you can implement this function for your apps.
 
-### User Transformation for Selective Event Removal and Value Aggregation
+### **User Transformation for Selective Event Removal and Value Aggregation**
 If an enterprise generates a large volume of events, but the target analytics destination charges by volume - then only certain samples of event data can be sent to the destination for analytics.
 This transformation function allows you to:
 - Selectively removes events based on a name match
 - Selectively removes events based on the value of a given attribute
 - Aggregates values of certain attributes for multiple instances of a specific type of event in a batch and then replaces those instances with a single instance containing the aggregated attributes
 
-### User Transformation for Missing Value Substitution and Batch Size Reduction or Sampling
+### **User Transformation for Missing Value Substitution and Batch Size Reduction or Sampling**
 This user transformation does the following:
 - Replaces missing values for a User-Agent attribute
 - In cases where the developer has populated crucial attributes within nested structures but not at the root level, copies the values to the root level
 - Reduces batch size and then selects only a subset of events
 
-### User Transformation for Removing Attributes without Values
+### **User Transformation for Removing Attributes without Values**
 In this transformation function, all the attributes within a given event payload which do not have any value are removed to reduce the payload size and optimize the storage space for warehouses.
 
-### Template User Transformation for Filtering by User E-Mail Domain, Name Splitting, Campaign Parameter Extraction
+### **Template User Transformation for Filtering by User E-Mail Domain, Name Splitting, Campaign Parameter Extraction**
 This user transformation does the following:	
 - Filter out events triggered by users whose e-mail address, if present, is from a particular domain. This can help in filtering out events triggered by users belonging to the enterprise owning the installation. Such users would not really be customers  per se and hence might not be of interest
 	
