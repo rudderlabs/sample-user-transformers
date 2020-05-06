@@ -42,12 +42,15 @@ The following user transformations are included in this repository, which you ca
 - Replaces multiple instances of specific event-type with a single instance containing the aggregated attributes
 
 ### User Transformation for Missing Value Substitution and Batch Size Reduction or Sampling
-**Features**
 - Replaces missing values for an attribute and reduce overall batch size by sampling events
 
 ### User Transformation for Removing Attributes without Values
-**Features**
 - Reduces payload size and optimize storage space for data warehouses
+
+### User Transformation for Filtering by User E-Mail Domain, Name Splitting, Campaign Parameter Extraction
+- Filters out events triggered by users whose email addresses are from a particular domain
+- Splits full name into first name and last name
+- In case of web events, extracts the UTM information from the URL and populate the appropriate keys of the canonical object model
 
 For a detailed description of each of these user transformations, please refer to our [wiki](https://github.com/rudderlabs/sample-user-transformers/wiki/Sample-User-Transformations) page.
 
