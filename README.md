@@ -34,20 +34,20 @@ Here’s a quick visual tutorial on adding a new user transformation:
 
 The following user transformations are included in this repository, which you can use as-is, or tweak them as per your requirement:
 
-### User Transformation for PII Detection and Masking
+### **User Transformation for PII Detection and Masking**
 - Implements a masked representation of developer-specified attributes
 
-### User Transformation for Selective Event Removal and Value Aggregation
+### **User Transformation for Selective Event Removal and Value Aggregation**
 - Selectively removes events
 - Replaces multiple instances of specific event-type with a single instance containing the aggregated attributes
 
-### User Transformation for Missing Value Substitution and Batch Size Reduction or Sampling
+### **User Transformation for Missing Value Substitution and Batch Size Reduction or Sampling**
 - Replaces missing values for an attribute and reduce overall batch size by sampling events
 
-### User Transformation for Removing Attributes without Values
+### **User Transformation for Removing Attributes without Values**
 - Reduces payload size and optimize storage space for data warehouses
 
-### User Transformation for Filtering by User E-Mail Domain, Name Splitting, Campaign Parameter Extraction
+### **User Transformation for Filtering by User E-Mail Domain, Name Splitting, Campaign Parameter Extraction**
 - Filters out events triggered by users whose email addresses are from a particular domain
 - Splits full name into first name and last name
 - In case of web events, extracts the UTM information from the URL and populate the appropriate keys of the canonical object model
