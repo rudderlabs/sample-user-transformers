@@ -1,12 +1,12 @@
-## User-defined Transformations for RudderStack
+## User Transformations for RudderStack
 
-RudderStack gives you the ability to code your custom transformation functions to implement use-cases based on your requirements. As these transformation functions are written in JavaScript, it is very easy for you to integrate these functions into the RudderStack data pipeline. Common use cases include PII detection and masking, event removal and aggregation, and event enrichment.
+RudderStack gives you the ability to code custom user transformation functions to implement use-cases based on your requirements. As these transformations are written in JavaScript, it is very easy for you to integrate them into the RudderStack data pipeline. Some common use cases for these transformations include PII detection and masking, event removal and aggregation, and event enrichment.
 
-This repository contains some useful transformation templates that you can use to create your own user-defined functions.
+This repository contains some useful transformation templates that you can use to create your own user transformations.
 
-### How user-defined transformation functions work
+### How user transformations work
 
-The user-defined transformation function:
+A user transformation does the following:
 - Accepts a JSON payload - which is essentially an array of event objects - formatted as per the canonical object model supported by RudderStack
 - Performs the user-defined function such as event removal/sampling, value substitution or aggregation on the input array
 - Emits the modified payload
@@ -20,62 +20,47 @@ Adding a new user-defined transformation function is quite simple:
 - Click on **CREATE NEW**
 - Add your code within the `transform` function in the **Transformation** window that comes up. You can add other functions and call them from within `transform`
 
-**Note**: User Transformations need to have a `transform` method that will take an array of events as argument and return the modified array
+**For detailed steps on adding a new user transformation, please follow [this documentation](https://docs.rudderstack.com/getting-started/adding-a-new-user-transformation-in-rudderstack)**
+
+
+**Important**: User Transformations need to have a `transform` method that will take an array of events as argument and return the modified array
+
 
 **Tip**: You can copy-paste the entire code of any of the functions in this repository into the **Transformation** window. Do remember to delete the pre-populated `transform` function in such cases, before pasting your code.
 
-Here’s a quick visual tutorial on how to do so:
+Here’s a quick visual tutorial on adding a new user transformation:
 
 ![Demo for User-defined Functions](Resources/UDF.gif)
 
-The following sections give you a detailed overview of the functionality of the sample transformation functions:
+The following user transformations are included in this repository, which you can use as-is, or tweak them as per your requirement:
 
 ### **User Transformation for PII Detection and Masking**
-This transformation function takes developer-supplied attribute names along with the values of matching attributes, and replaces them with **X**s or a masked representation, as per the developer's choice.
-
-[Read more](https://rudderstack.com/blog/protect-personally-identifiable-information-pii-using-rudderstack/) on how you can implement this function for your apps.
+- Implements a masked representation of developer-specified attributes
 
 ### **User Transformation for Selective Event Removal and Value Aggregation**
-If an enterprise generates a large volume of events, but the target analytics destination charges by volume - then only certain samples of event data can be sent to the destination for analytics.
-This transformation function allows you to:
-- Selectively removes events based on a name match
-- Selectively removes events based on the value of a given attribute
-- Aggregates values of certain attributes for multiple instances of a specific type of event in a batch and then replaces those instances with a single instance containing the aggregated attributes
+- Selectively removes events
+- Replaces multiple instances of specific event-type with a single instance containing the aggregated attributes
 
 ### **User Transformation for Missing Value Substitution and Batch Size Reduction or Sampling**
-This user transformation does the following:
-- Replaces missing values for a User-Agent attribute
-- In cases where the developer has populated crucial attributes within nested structures but not at the root level, copies the values to the root level
-- Reduces batch size and then selects only a subset of events
+- Replaces missing values for an attribute and reduce overall batch size by sampling events
 
 ### **User Transformation for Removing Attributes without Values**
-In this transformation function, all the attributes within a given event payload which do not have any value are removed to reduce the payload size and optimize the storage space for warehouses.
+- Reduces payload size and optimize storage space for data warehouses
 
-### **Template User Transformation for Filtering by User E-Mail Domain, Name Splitting, Campaign Parameter Extraction**
-This user transformation does the following:	
-- Filter out events triggered by users whose e-mail address, if present, is from a particular domain. This can help in filtering out events triggered by users belonging to the enterprise owning the installation. Such users would not really be customers  per se and hence might not be of interest
-	
-- If Full Name has been specified for user, then split the same into First and Last Names
-	  
-- In case of web events, if the URL of the page visited contains UTM information, then same to be extracted and appropriate keys of the canonical object model to be populated. These can then be used by subsequent campaign-oriented Destination Transformers e.g. MailChimp
+### **User Transformation for Filtering by User E-Mail Domain, Name Splitting, Campaign Parameter Extraction**
+- Filters out events triggered by users whose email addresses are from a particular domain
+- Splits the full name of a user into first name and last name
+- In case of web events, extracts the UTM information from the URL and populate the appropriate keys of the canonical object model
 
-Please feel free to use these functions and tweak them as per your requirements.
+For a detailed description of each of these user transformations, please refer to our [wiki](https://github.com/rudderlabs/sample-user-transformers/wiki/Sample-User-Transformations) page.
 
 ## License
 The RudderStack Server is released under the [AGPLv3 license](https://www.gnu.org/licenses/agpl-3.0-standalone.html).
 
 ## What is RudderStack
-RudderStack is an open-source customer data infrastructure platform for collecting, storing and routing customer event data to the destinations as specified by you. RudderStack runs on your cloud environment or even your data center and provides a powerful framework to process and route your event data on the fly.
+RudderStack is an open-source customer data infrastructure platform for collecting, storing and routing customer event data to the destinations as specified by you. RudderStack runs on your cloud environment or even your data center and provides a powerful framework to process and route your event data on the fly. 
 
-RudderStack runs as a single Go binary, with PostgreSQL being the only external dependency. 
-
-To know more about RudderStack, please visit our [website](https://rudderstack.com/) or our [GitHub](https://github.com/rudderlabs) repository. You can also [contact us](https://rudderstack.com/contact/) or join our [Discord](https://discordapp.com/invite/xNEdEGw) channel to know more about the platform, and what we do. Make sure you also check out the [HackerNews discussion](https://news.ycombinator.com/item?id=21081756) around RudderStack!
+To know more about RudderStack, please visit our [website](https://rudderstack.com/) or check our [GitHub](https://github.com/rudderlabs) repository. You can also [contact us](https://rudderstack.com/contact/) or join our [Discord](https://discordapp.com/invite/xNEdEGw) channel to know more about the platform, and what we do. Make sure you also check out the [HackerNews discussion](https://news.ycombinator.com/item?id=21081756) around RudderStack!
 
 ## Contribute
 Please see the [contributing guide](https://github.com/rudderlabs/rudder-server/blob/master/CONTRIBUTING.md) to get more information on how you can contribute to this project. If you have any ideas on developing your own custom transformation functions and want some more inputs or thoughts on them, you can talk to us on our [Discord](https://discordapp.com/invite/xNEdEGw) channel.
-
-## Resources
-- [Adding a New User-Defined Transformation in RudderStack](https://docs.rudderstack.com/getting-started/adding-a-new-user-defined-transformation-in-rudderstack)
-- [Protect Personally Identifiable Information (PII) in Your Apps Using RudderStack](https://rudderstack.com/blog/protect-personally-identifiable-information-pii-using-rudderstack/)
-- [Best Practices for Coding RudderStack Transformation Functions](https://docs.rudderstack.com/contributor-guide/create-a-new-destination-transformer-for-rudder/best-practices-for-coding-transformation-functions-in-javascript#best-practices-for-coding-rudderstack-transformation-functions)
-- [Destination Transformation in RudderStack](https://docs.rudderstack.com/contributor-guide/create-a-new-destination-transformer-for-rudder)
