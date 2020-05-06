@@ -52,7 +52,7 @@ The following user transformations are included in this repository, which you ca
 - Splits the full name of a user into first name and last name
 - In case of web events, extracts the UTM information from the URL and populate the appropriate keys of the canonical object model
 
-For a detailed description of each of these user transformations, please refer to our [wiki](https://github.com/rudderlabs/sample-user-transformers/wiki/Sample-User-Transformations) page.
+**Note**: For a detailed description of each of the user transformations included in this repository, please refer to our [wiki](https://github.com/rudderlabs/sample-user-transformers/wiki/Sample-User-Transformations) page.
 
 ## License
 The RudderStack Server is released under the [AGPLv3 license](https://www.gnu.org/licenses/agpl-3.0-standalone.html).
