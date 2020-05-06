@@ -49,7 +49,7 @@ The following user transformations are included in this repository, which you ca
 
 ### **User Transformation for Filtering by User E-Mail Domain, Name Splitting, Campaign Parameter Extraction**
 - Filters out events triggered by users whose email addresses are from a particular domain
-- Splits full name into first name and last name
+- Splits the full name of a user into first name and last name
 - In case of web events, extracts the UTM information from the URL and populate the appropriate keys of the canonical object model
 
 For a detailed description of each of these user transformations, please refer to our [wiki](https://github.com/rudderlabs/sample-user-transformers/wiki/Sample-User-Transformations) page.
