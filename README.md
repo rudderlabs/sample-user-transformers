@@ -37,8 +37,10 @@ The following user transformations are included in this repository, which you ca
 ### **User Transformation for PII Detection and Masking**
 - Implements a masked representation of developer-specified attributes
 
-### **User Transformation for Selective Event Removal and Value Aggregation**
+### **User Transformation for Selective Event Removal **
 - Selectively removes events
+
+### **User Transformation for Value Aggregation**
 - Replaces multiple instances of specific event-type with a single instance containing the aggregated attributes
 
 ### **User Transformation for Missing Value Substitution and Batch Size Reduction or Sampling**
