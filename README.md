@@ -34,6 +34,9 @@ Here’s a quick visual tutorial on adding a new user transformation:
 
 The following user transformations are included in this repository, which you can use as-is, or tweak them as per your requirement:
 
+### **User Transformation for Encriching with Clearbit**
+- Calls clearbit to enhance the email record with additional fields.
+
 ### **User Transformation for PII Detection and Masking**
 - Implements a masked representation of developer-specified attributes
 
