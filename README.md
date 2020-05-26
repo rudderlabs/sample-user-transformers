@@ -62,7 +62,7 @@ The following user transformations are included in this repository, which you ca
 - Enriches the user data by invoking Clearbit APIs and embedding the results within events
 
 ### **User Transformation for Enriching Events with Location Information Using IP2Location**
-- Enriches the event data by invoking IP2Location API and adding location information to the event
+- Enriches the event data by invoking the IP2Location API and adding location information to the event
 
 **Note**: For a detailed description of each of the user transformations included in this repository, please refer to our [wiki](https://github.com/rudderlabs/sample-user-transformers/wiki/Sample-User-Transformations) page.
 
