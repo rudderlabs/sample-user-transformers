@@ -32,6 +32,10 @@ Here’s a quick visual tutorial on adding a new user transformation:
 
 ![Demo for User-defined Functions](Resources/UDF.gif)
 
+
+## Sample User Transformations 
+
+
 The following user transformations are included in this repository, which you can use as-is, or tweak them as per your requirement:
 
 ### **User Transformation for PII Detection and Masking**
@@ -53,6 +57,9 @@ The following user transformations are included in this repository, which you ca
 - Filters out events triggered by users whose email addresses are from a particular domain
 - Splits the full name of a user into first name and last name
 - In case of web events, extracts the UTM information from the URL and populate the appropriate keys of the canonical object model
+
+### **User Transformation for Data Enrichment using Clearbit APIs**
+- Enrich user data by invoking Clearbit APIs and embedding the results within events
 
 **Note**: For a detailed description of each of the user transformations included in this repository, please refer to our [wiki](https://github.com/rudderlabs/sample-user-transformers/wiki/Sample-User-Transformations) page.
 
