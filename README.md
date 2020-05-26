@@ -38,9 +38,6 @@ Here’s a quick visual tutorial on adding a new user transformation:
 
 The following user transformations are included in this repository, which you can use as-is, or tweak them as per your requirement:
 
-### **User Transformation for Encriching with Clearbit**
-- Calls clearbit to enhance the email record with additional fields.
-
 ### **User Transformation for PII Detection and Masking**
 - Implements a masked representation of developer-specified attributes
 
@@ -62,7 +59,7 @@ The following user transformations are included in this repository, which you ca
 - In case of web events, extracts the UTM information from the URL and populate the appropriate keys of the canonical object model
 
 ### **User Transformation for Data Enrichment using Clearbit APIs**
-- Enrich user data by invoking Clearbit APIs and embedding the results within events
+- Enrich user data by invoking Clearbit APIs and embedding the results within events. In this sample, the Person API of Clearbit is invoked using e-mail address of user
 
 **Note**: For a detailed description of each of the user transformations included in this repository, please refer to our [wiki](https://github.com/rudderlabs/sample-user-transformers/wiki/Sample-User-Transformations) page.
 
