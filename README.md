@@ -64,7 +64,7 @@ The following user transformations are included in this repository, which you ca
 ### **User Transformation for Enriching Events with Location Information Using IP2Location**
 - Enriches the event data by invoking the IP2Location API and adding location information to the event
 
-### **User Transformation for Parsing User-Agent from Event Payload and Adding Device, OS and Browser Info to Event**
+### **User Transformation for Adding Device, OS and Browser Info to Event (by Parsing User-Agent String)**
 - Extract client-side device, OS and browser names and versions by parsing User-Agent string present in event payload
 - Add the information as JSON structure to the event payload
 
