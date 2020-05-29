@@ -64,9 +64,9 @@ The following user transformations are included in this repository, which you ca
 ### **User Transformation for Enriching Events with Location Information Using IP2Location**
 - Enriches the event data by invoking the IP2Location API and adding location information to the event
 
-### **User Transformation for Adding Device, OS and Browser Info to Event (by Parsing User-Agent String)**
-- Extract client-side device, OS and browser names and versions by parsing User-Agent string present in event payload
-- Add the information as JSON structure to the event payload
+### **User Transformation for Adding Device, OS and Browser Info to an Event**
+- Extracts the client-side device, OS and browser names and versions by parsing a User-Agent string present in the event payload
+- Adds the information as JSON structure to the event payload
 
 **Note**: For a detailed description of each of the user transformations included in this repository, please refer to our [wiki](https://github.com/rudderlabs/sample-user-transformers/wiki/Sample-User-Transformations) page.
 
