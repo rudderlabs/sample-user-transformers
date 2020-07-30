@@ -13,7 +13,7 @@ This directory consists of sample performance test code for some Rudderstack Use
 
 - Copy test script and test input JSON file to the directory created in above step 
 	-	`kubectl cp user_transform_perf_test.js my-release-rudderstack-transformer-d9ff4d765-v72pf:/home/node/perf_test/` 
-	-	`kubectl cp user_transform_perf_test_input.json my-release-rudderstack-transformer-d9ff4d765-v72pf:/home/node/perf_test/
+	-	`kubectl cp user_transform_perf_test_input.json my-release-rudderstack-transformer-d9ff4d765-v72pf:/home/node/perf_test/`
 
 - Login to the pod again, navigate to the test directory and execute tests 
 	- `node user_transform_perf_test.js`
