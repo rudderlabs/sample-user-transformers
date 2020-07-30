@@ -7,7 +7,7 @@ function transform(events) {
     const IOS_PRESENT_UA = "ios";
     
 	
-	const destination = events[0].destination;
+	//const destination = events[0].destination;
     
 	let GAbatchLengthToSend = 5; //set whatever size you want to set in the reduced batch
 	
