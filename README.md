@@ -68,7 +68,7 @@ The following user transformations are included in this repository, which you ca
 - Extracts the client-side device, OS and browser names and versions by parsing a User-Agent string present in the event payload
 - Adds the information as JSON structure to the event payload
 
-### **User Transformation for Converting Event Type
+### **User Transformation for Converting Event Type**
 - Converts event type from `track` to `identify` based on property values. Can be used as a template for conversion between other event types as well
 
 **Note**: For a detailed description of each of the user transformations included in this repository, please refer to our [wiki](https://github.com/rudderlabs/sample-user-transformers/wiki/Sample-User-Transformations) page.
