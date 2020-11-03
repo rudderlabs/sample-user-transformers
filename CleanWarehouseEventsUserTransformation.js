@@ -1,20 +1,15 @@
-function transform(events) {
-
-  //Remove keys which do not have values
-  let cleanEvents = events.map(ev => {
-    if (ev.properties) {
-      let keys = Object.keys(ev.properties)
-      if (keys) {
-        keys.forEach(key => {
-          if (ev.properties[key] === null) {
-              delete ev.properties[key]
-          }
-        })
-      }  
+export function transformEvent(event) {
+    //Remove keys which do not have values
+    let cleanEvent = event;
+    if (cleanEvent.properties) {
+        let keys = Object.keys(cleanEvent.properties)
+        if (keys) {
+            keys.forEach(key => {
+                if (cleanEvent.properties[key] === null) {
+                    delete cleanEvent.properties[key]
+                }
+            })
+        }
     }
-    return ev
-  });
-  
-
-  return cleanEvents;
+    return cleanEvent;
 }

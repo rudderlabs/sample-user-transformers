@@ -629,20 +629,29 @@ var q = fastpriorityqueue() // reuse this, except for async, it needs to make it
 // DO NOT CODE ABOVE THIS LINE
 
 
-export function transformEvent(event) {
-    // replace PII fields with obfuscations for fuzzy matched keys
-    walk(event,['SSN','Social Security Number', 'social security no.','social sec num', 'ssnum'],'XXX-XX-XXXX');
-    return event;
+function transform(events) {
+    
+    //traverse the JSON structure and replace PII fields with obfuscations for fuzzy matched keys
+    for( var i = 0; i < events.length; i++) { 
+        
+        event = events[i];
+        walk(event,['SSN','Social Security Number', 'social security no.','social sec num', 'ssnum'],'XXX-XX-XXXX'); 
+
+    }
+    
+    return events;
 }
 
 function walk(obj,targetKeyArray,newValue) {
-    for (let key in obj) {
-        let value = obj[key]
+
+    for (var key in obj) {
+        
+        value = obj[key]
         if (value && (typeof value == 'object')){ //recurse till leaf is reached
             walk(value,targetKeyArray,newValue)
         }
-        let fs = fuzzysortNew()
-        let matches = fs.go(key,targetKeyArray,{allowTypo: true})
+        fs = fuzzysortNew()
+        matches = fs.go(key,targetKeyArray,{allowTypo: true})
         if ((typeof matches != "undefined") && Array.isArray(matches)) {
             if (matches.length > 0) {
                 obj[key] = newValue;

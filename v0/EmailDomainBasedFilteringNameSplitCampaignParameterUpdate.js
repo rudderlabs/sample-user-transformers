@@ -4,17 +4,21 @@
 // - Add UTM parameters to context.traits object for subsequent processing by 
 //   campaign-oriented destination transformations (e.g. MailChimp)
 
-export function transformEvent(event) {
-    //filter out events triggered by users having particular e-mail domain e.g. rudderlabs
-    const e = event;
-    const email = e.context && e.context.traits && e.context.traits.email;
-    if(email){
-      const domain = email.substring(email.lastIndexOf("@") +1);
-      if(domain === 'rudderlabs.com') return
-    }
-
+function transform(events) {
+	
+  //filter out events triggered by users having particular e-mail domain e.g. rudderlabs	
+  const filteredEvents = events.filter((e) => {
+      const email = e.context && e.context.traits && e.context.traits.email;
+      if(email){
+          const domain = email.substring(email.lastIndexOf("@") +1);
+          if(domain === 'rudderlabs.com') return false    
+      }
+      return true;
+  });
   
-    //where full name is provided as part of context.traits.name - split into first and last names
+  //where full name is provided as part of context.traits.name - split into first and last names
+  const eventsWithNameDetails = filteredEvents.map((e) => {
+     
     // Splitting name and first name and last name  
     const fullName = e.context && e.context.traits && e.context.traits.name;
     if(fullName) {
@@ -62,5 +66,8 @@ export function transformEvent(event) {
         }
          
     }
+    
     return e;
+  });
+  return eventsWithNameDetails;
 }
