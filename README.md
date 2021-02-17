@@ -77,7 +77,7 @@ The following user transformations are included in this repository, which you ca
 **Note**: For a detailed description of each of the user transformations included in this repository, please refer to our [wiki](https://github.com/rudderlabs/sample-user-transformers/wiki/Sample-User-Transformations) page.
 
 ## License
-The RudderStack Server is released under the [MIT license][LICENSE.md].
+The RudderStack Server is released under the [MIT license](https://github.com/rudderlabs/sample-user-transformers/blob/master/LICENSE.md).
 
 # What is RudderStack
 RudderStack is an open-source customer data infrastructure platform for collecting, storing and routing customer event data to the destinations as specified by you. RudderStack runs on your cloud environment or even your data center and provides a powerful framework to process and route your event data on the fly. 
