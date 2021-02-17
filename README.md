@@ -1,4 +1,5 @@
-## User Transformations for RudderStack
+
+# User Transformations in RudderStack
 
 RudderStack gives you the ability to code custom user transformation functions to implement use-cases based on your requirements. As these transformations are written in JavaScript, it is very easy for you to integrate them into the RudderStack data pipeline. Some common use cases for these transformations include PII detection and masking, event removal and aggregation, and event enrichment.
 
@@ -12,9 +13,11 @@ A user transformation does the following:
 - Emits the modified payload
 
 ## Get Started
+
 The sample user transformations included in this repository can be added via the RudderStack Configuration Plane.
 
 Adding a new user-defined transformation function is quite simple:
+
 - Log into the [RudderStack dashboard](https://app.rudderstack.com/)
 - Click on the [Transformations](https://app.rudderstack.com/transformations) link
 - Click on **CREATE NEW**
@@ -74,12 +77,13 @@ The following user transformations are included in this repository, which you ca
 **Note**: For a detailed description of each of the user transformations included in this repository, please refer to our [wiki](https://github.com/rudderlabs/sample-user-transformers/wiki/Sample-User-Transformations) page.
 
 ## License
-The RudderStack Server is released under the [AGPLv3 license](https://www.gnu.org/licenses/agpl-3.0-standalone.html).
+The RudderStack Server is released under the [MIT license][LICENSE].
 
-## What is RudderStack
+# What is RudderStack
 RudderStack is an open-source customer data infrastructure platform for collecting, storing and routing customer event data to the destinations as specified by you. RudderStack runs on your cloud environment or even your data center and provides a powerful framework to process and route your event data on the fly. 
 
 To know more about RudderStack, please visit our [website](https://rudderstack.com/) or check our [GitHub](https://github.com/rudderlabs) repository. You can also [contact us](https://rudderstack.com/contact/) or join our [Slack](https://resources.rudderstack.com/join-rudderstack-slack) channel to know more about the platform, and what we do. Make sure you also check out the [HackerNews discussion](https://news.ycombinator.com/item?id=21081756) around RudderStack!
 
 ## Contribute
+
 Please see the [contributing guide](https://github.com/rudderlabs/rudder-server/blob/master/CONTRIBUTING.md) to get more information on how you can contribute to this project. If you have any ideas on developing your own custom transformation functions and want some more inputs or thoughts on them, you can talk to us on our [Slack](https://resources.rudderstack.com/join-rudderstack-slack) channel.
