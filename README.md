@@ -1,4 +1,4 @@
-# RudderStack User Transformations
+# Sample User Transformations
 
 RudderStack gives you the ability to code custom JavaScript functions to implement specific use-cases on your event data, like:
 
