@@ -28,7 +28,7 @@ The sample user transformations included in this repository can be added via the
 
 Adding a new user-defined transformation function is quite simple:
 - Log into the [**RudderStack dashboard**](https://app.rudderstack.com/)
-- Click on the [**Transformations**](https://app.rudderstack.com/transformations) link
+- Click on the [**Transformations**](https://app.rudderstack.com/transformations) link.
 - Click on the **CREATE NEW** button, assign a name to the transformation, and add the transformation code within the `transformEvent` function.
 
 >For detailed steps on adding a new user transformation, check out the [**documentation**](https://docs.rudderstack.com/getting-started/adding-a-new-user-transformation-in-rudderstack).
