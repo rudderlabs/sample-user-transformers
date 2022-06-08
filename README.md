@@ -6,8 +6,8 @@
 
 - [Getting Started](#getting-started)
 - [Filtering](#filtering)
-  - [Blacklist Event Names](#blacklist-event-names)
-  - [Whitelist Email Domains](#whitelist-email-domains)
+  - [Denylist Event Names](#denylist-event-names)
+  - [Allowlist Email Domains](#allowlist-email-domains)
 - [Sampling](#sampling)
   - [User Based](#user-based)
 - [Enrichment](#enrichment)
@@ -38,11 +38,11 @@ For detailed steps on adding a new transformation or library, check out the [doc
 
 ## Filtering
 
-### Blacklist Event Names
+### Denylist Event Names
 
-> Filter out event if a property (event name in this example) is included in a blacklist
+> Filter out event if a property (event name in this example) is included in a denylist
 
-1. Drop event if blacklist includes event name
+1. Drop event if denylist includes event name
 2. Return event otherwise
 
 ```javascript
@@ -72,11 +72,11 @@ export function transformEvent(event, metadata) {
   </table>
 </details>
 
-### Whitelist Email Domains
+### Allowlist Email Domains
 
-> Filter out event if a property (email domain in this example) is not included in a whitelist
+> Filter out event if a property (email domain in this example) is not included in a allowlist
 
-1. Return event if whitelist includes email domain
+1. Return event if allowlist includes email domain
 2. Drop event otherwise
 
 ```javascript
