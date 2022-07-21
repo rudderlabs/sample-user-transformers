@@ -1,8 +1,10 @@
 # Sample RudderStack Transformations
 
-[RudderStack Transformations](https://rudderstack.com/product/transformations/) give you the ability to code custom JavaScript functions to implement specific use-cases on your event data. This repository contains some useful transformation templates that you can use to create your own transformations. For more information on RudderStack Transformations, check out the [documentation](https://rudderstack.com/docs/transformations/).
+RudderStack's [Transformations](https://rudderstack.com/product/transformations/) feature gives you the ability to code custom JavaScript functions to implement specific use-cases on your event data. This repository contains some useful transformation templates that you can use to create your own transformations.
 
-## Table of Contents
+For more information on RudderStack Transformations, refer to the [documentation](https://rudderstack.com/docs/features/transformations/).
+
+## Table of contents
 
 - [Getting Started](#getting-started)
 - [Filtering](#filtering)
@@ -25,22 +27,22 @@
   - [Change Event Type](#change-event-type)
   - [Batch](#batch)
 
-## Getting Started
+## Getting started
 
-The sample [transformations](https://www.rudderstack.com/docs/transformations/) and [libraries](https://www.rudderstack.com/docs/transformations/#libraries) included in this repository can be added via the [RudderStack dashboard](https://app.rudderstack.com/):
+The sample [transformations](https://www.rudderstack.com/docs/features/transformations/) and [libraries](https://www.rudderstack.com/docs/features/transformations/#libraries) included in this repository can be added via the [RudderStack dashboard](https://app.rudderstack.com/). Follow these steps:
 
-1. Click the [Transformations](https://app.rudderstack.com/transformations) button.
-2. Click a CREATE NEW button.
-3. Add a name and code to the transformation or library.
-4. Click the Save button.
+1. In the [RudderStack dashboard](https://app.rudderstack.com/transformations), go to **Enhance** > **Transformations**.
+2. Click **New Transformations**.
+3. Enter a name and description and add the code for the transformation or library.
+4. Click **Save**.
 
-For detailed steps on adding a new transformation or library, check out the [documentation](https://rudderstack.com/docs/transformations/).
+For detailed steps on adding a new transformation or library, refer to the [documentation](https://rudderstack.com/docs/features/transformations/).
 
 ## Filtering
 
 ### Denylist Event Names
 
-> Filter out event if a property (event name in this example) is included in a denylist
+> Filter out event if a property (event name in this example) is included in a denylist.
 
 1. Drop event if denylist includes event name
 2. Return event otherwise
@@ -72,9 +74,9 @@ export function transformEvent(event, metadata) {
   </table>
 </details>
 
-### Allowlist Email Domains
+### Allowlist email domains
 
-> Filter out event if a property (email domain in this example) is not included in a allowlist
+> Filter out event if a property (email domain in this example) is not included in a allowlist.
 
 1. Return event if allowlist includes email domain
 2. Drop event otherwise
@@ -108,7 +110,7 @@ export function transformEvent(event, metadata) {
 
 ## Sampling
 
-### User Based
+### User-based
 
 > Drop a random sample of events based on a property (user ID in this example)
 
@@ -146,7 +148,7 @@ export function transformEvent(event, metadata) {
 
 ## Enrichment
 
-### Geolocation Data
+### Geolocation data
 
 > Enrich event with geolocation data using an external API and IP address
 
@@ -178,7 +180,7 @@ export async function transformEvent(event, metadata) {
   </table>
 </details>
 
-### User Data
+### User data
 
 > Enrich event with user data using an external API and email address
 
@@ -215,7 +217,7 @@ export async function transformEvent(event) {
   </table>
 </details>
 
-### User Agent Data
+### User agent data
 
 > Enrich event with parsed user agent data
 
@@ -251,7 +253,7 @@ export function transformEvent(event, metadata) {
   </table>
 </details>
 
-### Dynamic Header
+### Dynamic header
 
 > Add a dynamic header to event payload
 
@@ -282,7 +284,7 @@ export function transformEvent(event, metadata) {
   </table>
 </details>
 
-### Dynamic Path
+### Dynamic path
 
 > Dynamically append the event endpoint
 
@@ -353,7 +355,7 @@ export function transformEvent(event, metadata) {
 
 ## Cleaning
 
-### Remove Null Properties
+### Remove null properties
 
 > Remove all properties with null values
 
@@ -406,7 +408,7 @@ export function transformEvent(event, metadata) {
 }
 ```
 
-### Change Event Type
+### Change event type
 
 > Change the type of an event (track to identify in this example)
 
