@@ -159,7 +159,7 @@ export function transformEvent(event, metadata) {
 ```javascript
 export async function transformEvent(event, metadata) {
     if (event.request_ip) {
-        const res = await fetch("https://api.ip2location.com/v2/?ip=" + event.request_ip.trim() + "&addon=<required addon e.g.geotargeting>&lang=en&key=<IP2Location_API_Key>&package=<package as required e.g. WS10>");
+        const res = await fetch("https://ip2.app/info.php?ip=" + event.request_ip);
         event.context.geolocation = res;
     }
     return event;
