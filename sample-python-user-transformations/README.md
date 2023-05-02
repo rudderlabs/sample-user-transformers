@@ -100,7 +100,7 @@ import requests
 
 def transformEvent(event, metadata):
     if event.get("request_ip"):
-        res = requests.get("https://ip2.app/info.php?ip=" + event["request_ip"])
+        res = requests.get("<YOUR_API_ENDPOINT>" + event["request_ip"]) # Use your paid IP-to-geolocation API endpoint.
         if res.status_code == 200:
             event["context"]["geolocation"] = res.json();
     return event
