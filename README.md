@@ -159,7 +159,7 @@ export function transformEvent(event, metadata) {
 ```javascript
 export async function transformEvent(event, metadata) {
     if (event.request_ip) {
-        const res = await fetch("https://ip2.app/info.php?ip=" + event.request_ip);
+        const res = await fetch("<YOUR_API_ENDPOINT>" + event.request_ip); // Use your paid IP-to-geolocation API endpoint.
         event.context.geolocation = res;
     }
     return event;
