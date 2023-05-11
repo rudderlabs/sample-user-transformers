@@ -174,7 +174,7 @@ export async function transformEvent(event, metadata) {
       <th>Output</th>
     </tr>
     <tr>
-      <td valign="top">{<br>&emsp;"context": {<br>&emsp;&emsp;"ip": "64.233.160.0"<br>&emsp;}<br>}</td>
+      <td valign="top">{<br>&emsp;"context": {<br>&emsp;&emsp;"request_ip": "64.233.160.0"<br>&emsp;}<br>}</td>
       <td>{<br>&emsp;"context": {<br>&emsp;&emsp;"ip": "64.233.160.0",<br>&emsp;&emsp;"geolocation": {<br>&emsp;&emsp;&emsp;"country_code": "US",<br>&emsp;&emsp;&emsp;"country_name": "United States",<br>&emsp;&emsp;&emsp;"region_name": "California",<br>&emsp;&emsp;&emsp;"city_name": "Mountain View",<br>&emsp;&emsp;&emsp;"latitude": "37.405992",<br>&emsp;&emsp;&emsp;"longitude": "-122.078515",<br>&emsp;&emsp;&emsp;"zip_code": "94043",<br>&emsp;&emsp;&emsp;"time_zone": "-07:00"<br>&emsp;&emsp;}<br>&emsp;}<br>}</td>
     </tr>
   </table>
