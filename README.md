@@ -1,3 +1,8 @@
+<p align="center">
+🏆 Join <b><a href="https://www.rudderstack.com/blog/join-the-transformations-challenge-for-a-chance-to-win/">RudderStack Transformations Challenge</a></b> (Last date - Apr 7, 2023)
+  <br/>
+ </p>
+
 # Sample RudderStack Transformations
 
 RudderStack's [Transformations](https://rudderstack.com/product/transformations/) feature gives you the ability to code custom JavaScript functions to implement specific use-cases on your event data. This repository contains some useful transformation templates that you can use to create your own transformations.
