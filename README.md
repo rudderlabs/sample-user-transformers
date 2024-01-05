@@ -2,7 +2,7 @@
 
 RudderStack's [Transformations](https://rudderstack.com/product/transformations/) feature gives you the ability to code custom JavaScript functions to implement specific use-cases on your event data. This repository contains some useful transformation templates that you can use to create your own transformations.
 
-For more information on RudderStack Transformations, refer to the [documentation](https://rudderstack.com/docs/features/transformations/).
+For more information on RudderStack Transformations, refer to the [documentation](https://rudderstack.com/docs/transformations/).
 
 ## Table of contents
 
@@ -29,14 +29,14 @@ For more information on RudderStack Transformations, refer to the [documentation
 
 ## Getting started
 
-The sample [transformations](https://www.rudderstack.com/docs/features/transformations/) and [libraries](https://www.rudderstack.com/docs/features/transformations/#libraries) included in this repository can be added via the [RudderStack dashboard](https://app.rudderstack.com/). Follow these steps:
+The sample [transformations](https://www.rudderstack.com/docs/transformations/) and [libraries](https://www.rudderstack.com/docs/transformations/libraries/) included in this repository can be added via the [RudderStack dashboard](https://app.rudderstack.com/). Follow these steps:
 
 1. In the [RudderStack dashboard](https://app.rudderstack.com/transformations), go to **Enhance** > **Transformations**.
 2. Click **New Transformations**.
 3. Enter a name and description and add the code for the transformation or library.
 4. Click **Save**.
 
-For detailed steps on adding a new transformation or library, refer to the [documentation](https://rudderstack.com/docs/features/transformations/).
+For detailed steps on adding a new transformation or library, refer to the [documentation](https://rudderstack.com/docs/transformations/).
 
 ## Filtering
 
