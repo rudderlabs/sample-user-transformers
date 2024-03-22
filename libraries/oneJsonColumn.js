@@ -14,6 +14,7 @@
 * and then set `jsonPaths` option to `track.context.proprerties`.
 * This instructs RudderStack to not flatten `context.proprerties` of `track` events
 * and store that as json data type column.
+* More info about JSON Column Support - https://www.rudderstack.com/docs/destinations/warehouse-destinations/json-column-support
 ***/
 
 export function transformEvent(event, metadata) {
